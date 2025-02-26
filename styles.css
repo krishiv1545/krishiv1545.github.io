@@ -71,9 +71,20 @@ h1 {
 }
 
 .first-name {
-  left: 0;
+  left: 1vw;
 }
 
 .last-name {
-  right: 0;
+  right: 1vw;
+}
+
+#temp {
+  width: 100vw;
+  height: 100vh;
+  background-color: #555;
+}
+#nav-section {
+  width: 100vw;
+  height: 70vh;
+  background-color: #000;
 }

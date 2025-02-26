@@ -45,7 +45,7 @@ const maximizeFontSize = () => {
 
     const firstNameWidth = firstName.getBoundingClientRect().width;
     const lastNameWidth = lastName.getBoundingClientRect().width;
-    const availableWidth = titleWrapper.offsetWidth;
+    const availableWidth = titleWrapper.offsetWidth - 20;
 
     if (firstNameWidth + lastNameWidth > availableWidth) {
       let currentSize = 20;
@@ -124,3 +124,7 @@ window.addEventListener("resize", () => {
 window.addEventListener("load", () => {
   maximizeFontSize();
 });
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
