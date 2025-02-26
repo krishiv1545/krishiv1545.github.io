@@ -88,7 +88,6 @@ h1 {
   height: 70vh;
   background-color: #000;
   padding: 0 1vw;
-  border-bottom: 1px solid #555;
 }
 
 .navbar {
@@ -146,6 +145,13 @@ h1 {
 }
 
 #contact {
+  color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+}
+
+#journey {
   color: #fff;
   width: 100%;
   min-height: 100vh;
