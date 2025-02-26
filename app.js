@@ -45,7 +45,7 @@ const maximizeFontSize = () => {
 
     const firstNameWidth = firstName.getBoundingClientRect().width;
     const lastNameWidth = lastName.getBoundingClientRect().width;
-    const availableWidth = titleWrapper.offsetWidth - 20;
+    const availableWidth = titleWrapper.offsetWidth - 25;
 
     if (firstNameWidth + lastNameWidth > availableWidth) {
       let currentSize = 20;
@@ -116,6 +116,11 @@ setTimeout(() => {
 setTimeout(() => {
   document.getElementById("title").style.height = "30vh";
 }, 1400);
+
+setTimeout(() => {
+  document.getElementById("navbar").style.opacity = "1";
+  document.getElementById("navbar").style.transform = "translateY(-26px)";
+}, 1700);
 
 window.addEventListener("resize", () => {
   maximizeFontSize();
