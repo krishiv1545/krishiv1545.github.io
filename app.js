@@ -115,6 +115,11 @@ setTimeout(() => {
 
 setTimeout(() => {
   document.getElementById("title").style.height = "30vh";
+  document.getElementById("nav-section").style.display = "block";
+  document.getElementById("about").style.display = "block";
+  document.getElementById("projects").style.display = "block";
+  document.getElementById("contact").style.display = "block";
+  document.getElementById("journey").style.display = "block";
 }, 1400);
 
 setTimeout(() => {
@@ -129,7 +134,3 @@ window.addEventListener("resize", () => {
 window.addEventListener("load", () => {
   maximizeFontSize();
 });
-
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
