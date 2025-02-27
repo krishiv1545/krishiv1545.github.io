@@ -127,6 +127,11 @@ setTimeout(() => {
   document.getElementById("navbar").style.transform = "translateY(-26px)";
 }, 1700);
 
+setTimeout(() => {
+  document.getElementById("gradhat").style.opacity = "1";
+  document.getElementById("gradhat").style.transform = "translateY(0)";
+}, 2000);
+
 window.addEventListener("resize", () => {
   maximizeFontSize();
 });

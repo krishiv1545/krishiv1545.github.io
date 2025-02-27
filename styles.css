@@ -220,3 +220,15 @@ h1 {
 #journey {
   display: none;
 }
+
+.gradhat {
+  z-index: 100;
+  position: absolute;
+  height: 40%;
+  top: -30px;
+  left: 25%;
+  transform: rotate(-23deg);
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
