@@ -37,9 +37,12 @@ html {
 }
 
 h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #fff;
   letter-spacing: -0.03em;
   font-weight: bold;
+  font-weight: 700;
   white-space: nowrap;
 }
 
@@ -57,8 +60,9 @@ h1 {
 }
 
 .outline {
-  color: transparent;
+  color: #000;
   -webkit-text-stroke: 2px white;
+  -webkit-text-fill-color: transparent;
 }
 
 #first-name-2,
@@ -156,4 +160,55 @@ h1 {
   width: 100%;
   min-height: 100vh;
   background-color: #000;
+}
+
+.nav-content {
+  position: relative;
+  flex-direction: row;
+  min-width: 100px;
+  height: calc(100% - 2rem - 2vw - 6px);
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-26px);
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  padding: 3rem;
+  gap: 1rem;
+}
+
+.nav-content .nav-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  width: 30%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+}
+
+.nav-content .nav-left {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 70%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+}
+
+.nav-content .nav-left h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.nav-content .nav-right img {
+  position: relative;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
