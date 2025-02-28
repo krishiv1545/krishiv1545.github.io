@@ -120,11 +120,17 @@ setTimeout(() => {
   document.getElementById("projects").style.display = "block";
   document.getElementById("contact").style.display = "block";
   document.getElementById("journey").style.display = "block";
+
+  let height = document.querySelector(".nav-content").offsetHeight;
+  let width = document.querySelector(".nav-content").offsetWidth;
+  let nav_left_width = width - height;
+  document.querySelector(".nav-right").style.width = height + "px";
+  document.querySelector(".nav-left").style.maxWidth = nav_left_width + "px";
 }, 1400);
 
 setTimeout(() => {
   document.getElementById("navbar").style.opacity = "1";
-  document.getElementById("navbar").style.transform = "translateY(-26px)";
+  document.getElementById("navbar").style.transform = "translateY(-40px)";
 }, 1700);
 
 setTimeout(() => {
