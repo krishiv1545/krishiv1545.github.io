@@ -32,7 +32,7 @@ const titleElement = (
 
 ReactDOM.createRoot(titleDiv).render(titleElement);
 
-const maximizeFontSize = () => {
+/* const maximizeFontSize = () => {
   const titleWrapper = document.querySelector(".title-wrapper");
   const firstName = document.getElementById("first-name-1");
   const lastName = document.getElementById("last-name-1");
@@ -69,6 +69,42 @@ const maximizeFontSize = () => {
       }
     }
   }
+  firstName.style.display = "block";
+  lastName.style.display = "block";
+}; */
+
+const maximizeFontSize = async () => {
+  const titleWrapper = document.querySelector(".title-wrapper");
+  const firstName = document.getElementById("first-name-1");
+  const lastName = document.getElementById("last-name-1");
+
+  if (firstName && lastName && titleWrapper) {
+    const allNames = document.querySelectorAll(".first-name, .last-name");
+    allNames.forEach((el) => (el.style.fontSize = "20vw"));
+
+    let firstNameWidth = firstName.getBoundingClientRect().width;
+    let lastNameWidth = lastName.getBoundingClientRect().width;
+    const availableWidth = titleWrapper.offsetWidth - 25;
+
+    if (firstNameWidth + lastNameWidth > availableWidth) {
+      let currentSize = 20;
+      const step = 0.1;
+
+      while (
+        firstNameWidth + lastNameWidth > availableWidth &&
+        currentSize > 5
+      ) {
+        currentSize -= step;
+        allNames.forEach((el) => (el.style.fontSize = `${currentSize}vw`));
+
+        // await new Promise((res) => requestAnimationFrame(res));
+
+        firstNameWidth = firstName.getBoundingClientRect().width;
+        lastNameWidth = lastName.getBoundingClientRect().width;
+      }
+    }
+  }
+
   firstName.style.display = "block";
   lastName.style.display = "block";
 };
@@ -138,10 +174,10 @@ setTimeout(() => {
   document.getElementById("gradhat").style.transform = "translateY(0)";
 }, 2000);
 
-window.addEventListener("resize", () => {
-  maximizeFontSize();
+window.addEventListener("resize", async () => {
+  await maximizeFontSize();
 });
 
-window.addEventListener("load", () => {
-  maximizeFontSize();
+window.addEventListener("load", async () => {
+  await maximizeFontSize();
 });
