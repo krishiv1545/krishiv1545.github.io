@@ -34,6 +34,7 @@ body {
 }
 
 #title {
+  background-color: #000;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -129,6 +130,7 @@ h1 {
   z-index: 1000;
   padding-inline: 2rem;
   backdrop-filter: blur(4px);
+  overflow-x: hidden;
 }
 
 #navbar a {
