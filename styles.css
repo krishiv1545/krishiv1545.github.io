@@ -4,10 +4,6 @@
   box-sizing: border-box !important;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* Replace your current scroll timeline and animation setup with this */
 /* Replace your current scroll timeline and animation setup with this */
 @keyframes moveGradient {
@@ -117,11 +113,11 @@ h1 {
 }
 
 .navbar {
+  display: none;
   background-color: #000000b2;
   padding: 20px 0px;
   top: 40px;
   position: sticky;
-  display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: row;
@@ -158,12 +154,6 @@ h1 {
   color: #fff;
   border: 1px solid #fff;
   border-bottom: 5px solid #fff;
-}
-
-#about {
-  color: #fff;
-  width: 100%;
-  min-height: 100vh;
 }
 
 #projects {
@@ -236,6 +226,7 @@ h1 {
 #contact,
 #journey {
   display: none;
+  transform: translateY(-40px); /* you touch this, everything breaks */
 }
 
 .gradhat {
@@ -249,3 +240,57 @@ h1 {
   transform: translateY(-100px);
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
+
+#about {
+  color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 1vw;
+}
+
+h2 {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 14%;
+  height: 0.8rem;
+  transform: translateX(0);
+  background-color: #40623e;
+  z-index: -1;
+
+  animation: underlineEffect linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 100%;
+}
+
+@keyframes underlineEffect {
+  from {
+    transform: translateX(0);
+    width: 14%;
+  }
+  to {
+    transform: translateX(10%);
+    width: 113%;
+  }
+}
+
+/* .highlight:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 3rem;
+  transform: translateX(0);
+  background-color: #40623e;
+  z-index: -1;
+  transition: transform 0.4s ease-in-out, height 0.4s ease-in-out;
+} */

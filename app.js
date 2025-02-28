@@ -109,6 +109,14 @@ const maximizeFontSize = async () => {
   lastName.style.display = "block";
 };
 
+const adjustNavSection = () => {
+  let height = document.querySelector(".nav-content").offsetHeight;
+  let width = document.querySelector(".nav-content").offsetWidth;
+  let nav_left_width = width - height;
+  document.querySelector(".nav-right").style.width = height + "px";
+  document.querySelector(".nav-left").style.maxWidth = nav_left_width + "px";
+};
+
 const animateNames = (index) => {
   const firstNameOut = document.getElementById(`first-name-${index}`);
   const firstNameIn = document.getElementById(`first-name-${index + 1}`);
@@ -156,12 +164,9 @@ setTimeout(() => {
   document.getElementById("projects").style.display = "block";
   document.getElementById("contact").style.display = "block";
   document.getElementById("journey").style.display = "block";
+  document.getElementById("navbar").style.display = "flex";
 
-  let height = document.querySelector(".nav-content").offsetHeight;
-  let width = document.querySelector(".nav-content").offsetWidth;
-  let nav_left_width = width - height;
-  document.querySelector(".nav-right").style.width = height + "px";
-  document.querySelector(".nav-left").style.maxWidth = nav_left_width + "px";
+  adjustNavSection();
 }, 1400);
 
 setTimeout(() => {
@@ -175,9 +180,27 @@ setTimeout(() => {
 }, 2000);
 
 window.addEventListener("resize", async () => {
+  adjustNavSection();
   await maximizeFontSize();
 });
 
 window.addEventListener("load", async () => {
   await maximizeFontSize();
+});
+
+gsap.registerPlugin(ScrollToPlugin);
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+
+    if (target) {
+      gsap.to(window, {
+        duration: 1, // Smooth scroll duration
+        scrollTo: target,
+        ease: "power2.inOut", // Light smooth easing
+      });
+    }
+  });
 });
