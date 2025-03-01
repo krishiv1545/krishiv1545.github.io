@@ -324,11 +324,12 @@ h2 {
   font-size: 2rem;
 }
 
-.about-left li:hover {
+/* .about-left li:hover {
   transform: translate3d(0, -5px, 0);
-}
+} */
 
 .about-left li {
+  position: relative;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -338,7 +339,23 @@ h2 {
   border-image: linear-gradient(45deg, #40623e 0%, #ffffff84 100%) 1;
   padding: 1rem 2rem;
   margin-bottom: 2rem;
-  transition: transform 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.about-left li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, #40623e 0%, #ffffff00 100%);
+  transform: translate(-100%, 100%);
+  transition: transform 0.3s ease-in-out, opacity 0.6s ease-in 0.3s;
+  z-index: -1;
+  opacity: 0;
+}
+
+.about-left li:hover::before {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .about-left li:nth-child(4) {
@@ -376,7 +393,7 @@ h2 {
 .tech-stack-icons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2.5rem;
+  gap: 1.5rem;
   width: 100%;
   padding: 20px 0;
   margin-top: 1rem;
@@ -387,7 +404,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  padding: 1rem;
+  padding: 1rem 0;
   border: none;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
@@ -502,15 +519,63 @@ h2 {
 .project {
   display: flex;
   flex-direction: row;
-  border: 1px solid blue;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
 }
 
 .project-left {
-  width: 50%;
-  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 32%;
+  padding: 1rem;
+}
+
+.project-left h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  position: sticky;
+  top: 170px;
 }
 
 .project-right {
-  width: 50%;
-  border: 1px solid green;
+  width: 68%;
+  padding: 1rem;
+  gap: 0px;
+}
+
+.project-right img {
+  width: 100%;
+  height: auto;
+}
+
+.about-project {
+  position: sticky;
+  top: calc(176px + 4.5rem);
+  margin-top: 3rem;
+}
+
+.about-project ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.about-project li {
+  list-style: none;
+  padding: 0.5rem 0.8rem;
+  margin: 0.5rem;
+  background: linear-gradient(45deg, #40623e 0%, #222 100%);
+  border-radius: 1000px;
+}
+
+.about-project p {
+  margin-top: 1rem;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  font-weight: 20px;
 }
