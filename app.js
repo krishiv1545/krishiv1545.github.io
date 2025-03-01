@@ -196,10 +196,13 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     const target = document.querySelector(this.getAttribute("href"));
 
     if (target) {
+      const offset = 140;
+      const targetPosition = target.offsetTop - offset;
+
       gsap.to(window, {
-        duration: 1, // Smooth scroll duration
-        scrollTo: target,
-        ease: "power2.inOut", // Light smooth easing
+        duration: 1.5,
+        scrollTo: targetPosition,
+        ease: "power2.inOut",
       });
     }
   });
