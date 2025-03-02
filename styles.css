@@ -549,12 +549,40 @@ h2 {
   width: 68%;
   padding: 1rem;
   gap: 0px;
+  perspective: 1000px;
 }
 
 .project-right img {
-  width: 100%;
+  position: relative;
+  width: 92%;
   height: auto;
+  margin-bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  /* transform: translateX(-50%) rotateX(5deg);
+  transform-origin: top;
+
+  animation: straightenImage linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 100%; */
 }
+
+/* @keyframes straightenImage {
+  0% {
+    transform: translateX(-50%) rotateX(5deg);
+  }
+  50% {
+    transform: translateX(-50%) rotateX(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotateX(0deg);
+  }
+} */
+
+/* .straightenImage {
+  transform: translateX(-50%) rotateX(0deg);
+  border: 5px solid #40623e;
+} */
 
 .about-project {
   /* position: sticky;

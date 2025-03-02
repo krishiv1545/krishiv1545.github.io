@@ -207,3 +207,14 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+/* gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".project-right img").forEach((img) => {
+  ScrollTrigger.create({
+    trigger: img,
+    start: "top 50%", // Adjust based on when you want the effect to happen
+    onEnter: () => img.classList.add("straightenImage"),
+    // once: true,
+  });
+}); */
