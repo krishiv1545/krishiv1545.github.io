@@ -5,26 +5,7 @@ const titleElement = (
     <h1 className="first-name" id="first-name-1">
       Krishiv
     </h1>
-    <h1 className="first-name" id="first-name-2">
-      Krishiv
-    </h1>
-    <h1 className="first-name" id="first-name-3">
-      Krishiv
-    </h1>
-    <h1 className="first-name" id="first-name-4">
-      Krishiv
-    </h1>
-
     <h1 className="last-name outline" id="last-name-1">
-      Khambhayata
-    </h1>
-    <h1 className="last-name outline" id="last-name-2">
-      Khambhayata
-    </h1>
-    <h1 className="last-name outline" id="last-name-3">
-      Khambhayata
-    </h1>
-    <h1 className="last-name outline" id="last-name-4">
       Khambhayata
     </h1>
   </div>
@@ -116,46 +97,6 @@ const adjustNavSection = () => {
   document.querySelector(".nav-right").style.width = height + "px";
   document.querySelector(".nav-left").style.maxWidth = nav_left_width + "px";
 };
-
-const animateNames = (index) => {
-  const firstNameOut = document.getElementById(`first-name-${index}`);
-  const firstNameIn = document.getElementById(`first-name-${index + 1}`);
-  const lastNameOut = document.getElementById(`last-name-${index}`);
-  const lastNameIn = document.getElementById(`last-name-${index + 1}`);
-
-  if (firstNameOut && firstNameIn) {
-    firstNameOut.style.transform = "translateY(-100%)";
-    firstNameOut.style.opacity = "0";
-    firstNameIn.style.transform = "translateY(0)";
-    firstNameIn.style.opacity = "1";
-  }
-
-  if (lastNameOut && lastNameIn) {
-    lastNameOut.style.transform = "translateY(100%)";
-    lastNameOut.style.opacity = "0";
-    lastNameIn.style.transform = "translateY(0)";
-    lastNameIn.style.opacity = "1";
-  }
-};
-
-[1, 2, 3].forEach((index) => {
-  setTimeout(() => animateNames(index), index * 300);
-});
-setTimeout(() => {
-  document.getElementById("first-name-1").style.display = "none";
-  document.getElementById("last-name-1").style.display = "none";
-  document.getElementById("first-name-2").style.display = "none";
-  document.getElementById("last-name-2").style.display = "none";
-  document.getElementById("first-name-3").style.display = "none";
-  document.getElementById("last-name-3").style.display = "none";
-
-  const four1 = document.getElementById("first-name-4");
-  const four2 = document.getElementById("last-name-4");
-  four1.style.transform = "translateY(0)";
-  four1.style.opacity = "1";
-  four2.style.transform = "translateY(0)";
-  four2.style.opacity = "1";
-}, 1400);
 
 setTimeout(() => {
   document.getElementById("title").style.height = "30vh";
