@@ -610,3 +610,13 @@ h2 {
   line-height: 1.5;
   font-weight: 20px;
 }
+
+canvas {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1000 !important;
+  pointer-events: none;
+}

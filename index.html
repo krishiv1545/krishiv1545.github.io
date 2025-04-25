@@ -30,8 +30,14 @@
     <script type="text/babel" src="app.js"></script>
     <title>Krishiv K.</title>
     <link rel="icon" type="image/x-icon" href="images/logo_v1_red.png" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>-->
   </head>
   <body onload="maximizeFontSize()">
+    <canvas id="moonCanvas" class="threejs-bg"></canvas>
+
     <div id="title"></div>
     <div class="navbar" id="navbar">
       <a href="#journey">Journey</a>
@@ -293,6 +299,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+    <script src="output.js"></script>
     <script type="text/babel" src="app.js"></script>
   </body>
 </html>
