@@ -22,10 +22,10 @@ const ambientLight = new THREE.AmbientLight(0x404040);
 scene.add(ambientLight);
 
 //HELPERSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSs
-/* const axesHelper = new THREE.AxesHelper(5);
-scene.add(axesHelper); */
-/* const lightHelper = new THREE.DirectionalLightHelper(light, 500);
-scene.add(lightHelper); */
+//const axesHelper = new THREE.AxesHelper(5);
+//scene.add(axesHelper);
+//const lightHelper = new THREE.DirectionalLightHelper(light, 500);
+//scene.add(lightHelper);
 
 const loader = new THREE.OBJLoader();
 loader.load(
@@ -36,7 +36,7 @@ loader.load(
     scene.add(loadedObject);
     loadedObject.position.y = 0;
     loadedObject.scale.set(0.18, 0.18, 0.18);
-    loadedObject.rotation.x -= Math.PI / 3;
+    loadedObject.rotation.x -= Math.PI / 2.5;
   },
 
   function (xhr) {
