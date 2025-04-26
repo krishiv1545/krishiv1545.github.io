@@ -1,8 +1,8 @@
-/* replace #fff with #fff */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box !important;
+  text-shadow: h-shadow v-shadow blur-radius #000 !important;
 }
 
 @keyframes moveGradient {
@@ -26,6 +26,14 @@ body {
   animation: moveGradient 1s linear forwards;
   animation-timeline: scroll();
   animation-range: 0 100%;
+
+  min-height: 100%;
+  height: auto;
+}
+
+html {
+  min-height: 100%;
+  height: auto;
 }
 
 #title {
@@ -66,11 +74,6 @@ h1 {
   transition: transform 0.6s ease, opacity 0.4s ease-in-out;
   /* transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform, opacity; */
-}
-
-#first-name-1,
-#last-name-1 {
-  display: none;
 }
 
 .outline {
@@ -316,7 +319,7 @@ h2 {
 }
 
 .about-left a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -407,7 +410,7 @@ h2 {
   gap: 1.5rem;
   padding: 1rem 0;
   border: none;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
@@ -555,7 +558,8 @@ h2 {
 
 .project-right img {
   position: relative;
-  width: 92%;
+  /*width: 92%;*/
+  width: 80%;
   height: auto;
   margin-bottom: 1rem;
   left: 50%;
@@ -620,4 +624,15 @@ canvas {
   height: 100vh;
   z-index: -1000 !important;
   pointer-events: none;
+}
+
+.content-overlay {
+  position: fixed !important;
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: -500;
+  background-color: rgba(0,0,0,0.7);
 }
