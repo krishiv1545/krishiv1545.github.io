@@ -1,18 +1,3 @@
-const titleDiv = document.getElementById("title");
-
-const titleElement = (
-  <div className="title-wrapper">
-    <h1 className="first-name" id="first-name-1">
-      Krishiv
-    </h1>
-    <h1 className="last-name outline" id="last-name-1">
-      Khambhayata
-    </h1>
-  </div>
-);
-
-ReactDOM.createRoot(titleDiv).render(titleElement);
-
 /* const maximizeFontSize = () => {
   const titleWrapper = document.querySelector(".title-wrapper");
   const firstName = document.getElementById("first-name-1");

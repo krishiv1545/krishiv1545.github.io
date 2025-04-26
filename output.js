@@ -1,3 +1,9 @@
+let targetRotationX = 0;
+const maxTiltX = 0.15;
+const maxTiltY = 0.08;
+let targetRotationY = 0;
+const initialXRotation = -Math.PI / 2.5; // Store the initial rotation
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -36,7 +42,7 @@ loader.load(
     scene.add(loadedObject);
     loadedObject.position.y = 0;
     loadedObject.scale.set(0.18, 0.18, 0.18);
-    loadedObject.rotation.x -= Math.PI / 2.5;
+    loadedObject.rotation.x = initialXRotation; 
   },
 
   function (xhr) {
@@ -51,14 +57,30 @@ loader.load(
 // controls.update();
 // controls.enabled = false;
 
-
-function animate() {
-  requestAnimationFrame(animate);
-
-  if (loadedObject) {
-    loadedObject.rotation.z += 1 / 1000;
+// Move the mousemove event listener outside the animate loop
+window.addEventListener('mousemove', (event) => {
+    const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+    const mouseY = (event.clientY / window.innerHeight) * 2 - 1;
+    targetRotationX = mouseX * maxTiltX;
+    targetRotationY = mouseY * maxTiltY;
+  });
+  
+  function animate() {
+    requestAnimationFrame(animate);
+  
+    if (loadedObject) {
+      // Keep the constant z-axis rotation
+      loadedObject.rotation.z += 1 / 1000;
+      
+      // Smoothly update y-rotation based on mouse position
+      loadedObject.rotation.y += (targetRotationX - loadedObject.rotation.y) * 0.05;
+      
+      // For x-rotation, apply the mouse tilt relative to the initial rotation
+      const targetX = initialXRotation + targetRotationY;
+      loadedObject.rotation.x += (targetX - loadedObject.rotation.x) * 0.05;
+    }
+    
+    renderer.render(scene, camera);
   }
-  renderer.render(scene, camera);
-}
-
-animate();
+  
+  animate();
