@@ -291,6 +291,11 @@ h2 {
   padding-right: var(--spacing-large);
 }
 
+.about-left ul {
+  display: flex;
+  flex-direction: column;
+}
+
 .about-left a {
   color: #fff;
   text-decoration: none;
@@ -524,7 +529,7 @@ canvas {
   top: 0;
   left: 0;
   z-index: -500;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.6);
 }
 
 /* Medium screens (tablets, 992px and down) */
@@ -568,6 +573,10 @@ canvas {
   
   .project-right img {
     width: 90%;
+  }
+
+  #navbar {
+    margin-top: 20px;
   }
 }
 
@@ -636,6 +645,15 @@ canvas {
   .about-left a {
     font-size: 1.5rem;
   }
+
+  .about-left ul {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  #navbar {
+    margin-top: 30px;
+  }
 }
 
 /* Small devices (480px and down) */
@@ -691,6 +709,10 @@ canvas {
     font-size: 1rem;
     padding: 0.3rem 0.6rem;
   }
+
+  .about-left ul {
+    flex-direction: row;
+  }
 }
 
 /* Extra small devices (350px and down) */
@@ -719,6 +741,10 @@ canvas {
   
   .tech-stack-icons i {
     font-size: 2.5rem;
+  }
+
+  .about-left ul {
+    flex-direction: row;
   }
 }
 

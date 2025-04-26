@@ -26,3 +26,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+
+//const divA = document.getElementById('title');
+//const divB = document.getElementById('navbar');
+//const divAHeight = 0.8 * divA.offsetHeight;
+//divB.style.marginTop = divAHeight + 'px';
