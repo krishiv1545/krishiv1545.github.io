@@ -61,7 +61,24 @@
 
     .project-left h3 {
         align-self: flex-start;
-    }   
+    }
+    
+    .image-set img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .text-set {
+      padding-inline: 10px;
+    }
+
+    .alignLeft {
+      padding-left: 1rem;
+    }
+
+    .alignRight {
+      padding-right: 1rem;
+    }
   }
 
 
@@ -178,6 +195,24 @@
       .middle-anchors {
         display: none;
       }
+
+      .image-set img {
+        width: 200px;
+        height: 200px;
+        opacity: 1;
+      }
+
+      .text-set {
+        padding-inline: 10px;
+      }
+  
+      .alignLeft {
+        padding-left: 1rem;
+      }
+  
+      .alignRight {
+        padding-right: 1rem;
+      }
   }
   
 
@@ -278,6 +313,24 @@
     .middle-anchors {
       display: none;
     }
+
+    .image-set img {
+      width: 200px;
+      height: 200px;
+      opacity: 1;
+    }
+
+    .text-set {
+      padding-inline: 10px;
+    }
+
+    .alignLeft {
+      padding-left: 1rem;
+    }
+
+    .alignRight {
+      padding-right: 1rem;
+    }
   }
   
 
@@ -350,5 +403,23 @@
 
     .middle-anchors {
       display: none;
+    }
+
+    .image-set img {
+      width: 150px;
+      height: 150px;
+      opacity: 1;
+    }
+
+    .text-set {
+      padding-inline: 10px;
+    }
+
+    .alignLeft {
+      padding-left: 1rem;
+    }
+
+    .alignRight {
+      padding-right: 1rem;
     }
   }
