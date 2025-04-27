@@ -255,16 +255,19 @@ h2 {
   animation: underlineEffect linear;
   animation-timeline: view();
   animation-range: entry 0% cover 100%;
+  max-width: 100vw !important;
 }
 
 @keyframes underlineEffect {
   from {
     transform: translateX(0);
     width: 14%;
+    max-width: 100vw !important;
   }
   to {
     transform: translateX(10%);
-    width: 113%;
+    width: 120%;
+    max-width: 100vw !important;
   }
 }
 
@@ -636,14 +639,12 @@ canvas {
   position: relative;
   width: 50%;
   height: 100%;
-  border: 1px solid rgb(197, 255, 197);
 }
 
 .journey-right {
   position: relative;
   width: 50%;
   height: 100%;
-  border: 1px solid blue;
 }
 
 .hide-navbar-btn {
@@ -859,4 +860,49 @@ canvas {
   .contact-content {
     flex-direction: column;
   }
+}
+
+.image-set {
+  padding: 1rem 2rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  img:hover {
+    opacity: 1;
+  }
+}
+
+.text-set {
+  padding: 1rem 2rem;
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  .era {
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+}
+
+.alignLeft {
+  justify-content:flex-start;
+  text-align: start;
+}
+
+.alignRight {
+  justify-content: flex-end;
+  text-align: end;
 }
