@@ -31,3 +31,28 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 //const divB = document.getElementById('navbar');
 //const divAHeight = 0.8 * divA.offsetHeight;
 //divB.style.marginTop = divAHeight + 'px';
+
+const form = document.getElementById('contact-form');
+const statusMessage = document.getElementById('form-status');
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault(); // prevent default form submit
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch('https://formspree.io/f/xdkgkbll', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: formData
+    });
+
+    if (response.ok) {
+      statusMessage.innerHTML = "✅ Thank you! Your message has been sent.";
+      form.reset();
+    } else {
+      statusMessage.innerHTML = "❌ Oops! Something went wrong.";
+    }
+  } catch (error) {
+    statusMessage.innerHTML = "❌ Error! Unable to send message.";
+  }
+});

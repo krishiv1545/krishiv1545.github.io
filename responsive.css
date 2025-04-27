@@ -161,6 +161,23 @@
     .project-left h3 {
         align-self: flex-start;
     }
+
+    .outline {
+        color: #000;
+        text-shadow:
+          -1px -1px 0 white,
+          1px -1px 0 white,
+          -1px 1px 0 white,
+          1px 1px 0 white;
+      }
+
+      .hide-navbar-btn {
+        display: block;
+      }
+  
+      .middle-anchors {
+        display: none;
+      }
   }
   
 
@@ -244,6 +261,23 @@
     .project-left h3 {
         align-self: flex-start;
     }
+
+    .outline {
+        color: #000;
+        text-shadow:
+          -1px -1px 0 white,
+          1px -1px 0 white,
+          -1px 1px 0 white,
+          1px 1px 0 white;
+    }
+
+    .hide-navbar-btn {
+      display: block;
+    }
+
+    .middle-anchors {
+      display: none;
+    }
   }
   
 
@@ -299,5 +333,22 @@
 
     .project-left h3 {
         align-self: flex-start;
+    }
+
+    .outline {
+        color: #000;
+        text-shadow:
+          -1px -1px 0 white,
+          1px -1px 0 white,
+          -1px 1px 0 white,
+          1px 1px 0 white;
+      }
+    
+    .hide-navbar-btn {
+      display: block;
+    }
+
+    .middle-anchors {
+      display: none;
     }
   }

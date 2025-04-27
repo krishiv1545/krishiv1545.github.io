@@ -78,8 +78,11 @@ a {
 
 .outline {
   color: #000;
-  -webkit-text-stroke: 2px white;
-  -webkit-text-fill-color: transparent;
+  text-shadow:
+    -2px -2px 0 white,
+    2px -2px 0 white,
+    -2px 2px 0 white,
+    2px 2px 0 white;
 }
 
 .first-name {
@@ -160,7 +163,9 @@ a {
 #journey {
   color: #fff;
   width: 100%;
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: auto;
 }
 
 #nav-section {
@@ -333,7 +338,7 @@ h2 {
   inset: 0;
   background: linear-gradient(45deg, #40623e 0%, #ffffff00 100%);
   transform: translate(-100%, 100%);
-  transition: transform 0.3s ease-in-out, opacity 0.6s ease-in 0.3s;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   z-index: -1;
   opacity: 0;
 }
@@ -353,9 +358,9 @@ h2 {
   overflow-x: hidden;
   overflow-y: hidden;
   padding: 1.5rem;
-  background: rgba(64, 98, 62, 0.1);
+  /*background: rgba(64, 98, 62, 0.1);*/
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);*/
 }
 
 .about-right h3 {
@@ -455,12 +460,11 @@ h2 {
 .project-left {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 32%;
+  width: 35%;
   padding: var(--spacing-medium);
   height: fit-content;
   position: sticky;
-  top: 170px;
+  top: 150px;
 }
 
 .project-left h3 {
@@ -473,7 +477,7 @@ h2 {
 }
 
 .project-right {
-  width: 68%;
+  width: 65%;
   padding: var(--spacing-medium);
   gap: 0px;
   perspective: 1000px;
@@ -575,4 +579,280 @@ canvas {
   color: #a6c7a4;
   text-align: center;
   margin-top: 16px;
+}
+
+/* JOURNEYYYYYYYYYYYYYYYYYYYYY / LOREEEEEEEEEEEEEEEEEEEEEEEEEEE */
+
+.journey-content {
+  position:relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+}
+
+.arrow-top {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #a6c7a4; 
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background-color: #a6c7a4;
+  border-radius: 100%;
+  background-image: linear-gradient(to bottom, #a6c7a4, #a6c7a4, #e0e0e0, #a6c7a4, #a6c7a4);}
+
+.arrow-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #a6c7a4; 
+}
+
+.journey-left-right-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.journey-left {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  border: 1px solid rgb(197, 255, 197);
+}
+
+.journey-right {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  border: 1px solid blue;
+}
+
+.hide-navbar-btn {
+  display: none;
+}
+
+#journey-navbar-button, #about-navbar-button, #projects-navbar-button, #contact-navbar-button {
+  text-align: center;
+}
+
+/* CONTACT PAGE */
+
+
+
+
+
+
+#contact {
+  color: #fff;
+  width: 100%;
+  padding: 0rem 1rem;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  align-items: stretch;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-card,
+.community-card,
+.contact-form {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #40623e;
+  border-radius: 8px;
+  padding: 2rem;
+  height: 100%;
+}
+
+.contact-card h3,
+.community-card h3,
+.contact-form h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #a6c7a4;
+  font-family: Arial, sans-serif;
+  border-bottom: 2px solid #40623e;
+  padding-bottom: 0.5rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.contact-item i {
+  font-size: 1.4rem;
+  color: #a6c7a4;
+}
+
+.contact-item a {
+  font-size: 1rem;
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.contact-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-social a {
+  font-size: 1.8rem;
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-out;
+}
+
+.contact-social a:hover {
+  color: #a6c7a4;
+  transform: scale(1.1)
+}
+
+.community-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.community-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.community-logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in, border-radius 0.3s ease-in-out;
+}
+
+/*.community-logo img:hover {
+  transform: scale(3.5);
+  border-radius: 4px;
+}*/
+
+.community-logo span {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+}
+
+.join-button {
+  background-color: #40623e;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  width: 100%;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #40623e;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border: 1px solid #5b8f59;
+}
+
+.submit-btn {
+  background-color: #40623e;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-align: center;
+  border: none;
+  width: 100%;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.form-success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #1e1e1e;
+  border: 1px solid #40623e;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.form-success h3 {
+  color: #a6c7a4;
+  font-size: 2rem;
+}
+
+.form-success p {
+  color: #ccc;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
 }

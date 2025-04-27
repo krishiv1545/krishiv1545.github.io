@@ -23,6 +23,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="responsive.css" />
@@ -47,12 +48,16 @@
     </div>
 
     <div class="navbar" id="navbar">
-      <a href="#journey">Lore</a>
+      <a href="#journey" class="journey-navbar-button" id="journey-navbar-button">My  Lore</a>
       <div class="middle-anchors">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
+        <a href="#about" class="about-navbar-button" id="about-navbar-button">About</a>
+        <a href="#projects" class="projects-navbar-button" id="projects-navbar-button">Projects</a>
       </div>
-      <a href="#contact">Contact</a>
+      <!--TO HIDE-->
+      <a href="#about" class="about-navbar-button hide-navbar-btn" id="about-navbar-button">About</a>
+      <a href="#projects" class="projects-navbar-button hide-navbar-btn" id="projects-navbar-button">Projects</a>
+      <!---->
+      <a href="#contact" class="contact-navbar-button" id="contact-navbar-button">Contact</a>
     </div>
 
     <div id="nav-section">
@@ -106,7 +111,7 @@
               >
             </li>
             <li>
-              <a href="resume_feb25.pdf" target="_blank"
+              <a href="resume.pdf" target="_blank"
                 ><i class="fas fa-file-pdf"></i>Resume</a
               >
             </li>
@@ -117,9 +122,9 @@
             I'm Krishiv Khambhayata, a 2nd-year Computer Science student
             passionate about Web Development and Machine Learning.
             <br /><br />
-            I've a tiny bit obsession with the Moon.
+            I've a tiny bit of an obsession with the Moon.
             <br /><br />
-            I spend psycopathically long amount of hours writing vanilla CSS as
+            I spend psychopathically long amount of hours writing vanilla CSS as
             having Art seaping into webpages is important to me.
           </h3>
 
@@ -309,25 +314,127 @@
 
     <div id="journey">
       <h2 class="highlight">Lore</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        voluptas, dolore temporibus officia eaque debitis facere ad obcaecati,
-        eius quo inventore, quos reiciendis quisquam harum quam impedit amet.
-        Quidem, quam.
-      </p>
+      <div class="journey-content">
+
+        <div class="arrow-top"></div>
+        <div class="line"></div>
+        <div class="arrow-bottom"></div>
+
+        <!-- GRACE BLOCKS (START) -->
+        <div class="journey-left-right-wrapper" style="height: 40px !important">
+          <div class="journey-left"></div>
+          <div class="journey-right"></div>
+        </div>
+
+        <div class="journey-left-right-wrapper">
+          <div class="journey-left">LEFT</div>
+          <div class="journey-right">RIGHT</div>
+        </div>
+
+        <!-- GRACE BLOCKS (END) -->
+        <div class="journey-left-right-wrapper" style="height: 40px !important">
+          <div class="journey-left"></div>
+          <div class="journey-right"></div>
+        </div>
+      </div>
     </div>
 
     <div id="contact">
       <h2 class="highlight">Contact</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-        voluptas, dolore temporibus officia eaque debitis facere ad obcaecati,
-        eius quo inventore, quos reiciendis quisquam harum quam impedit amet.
-        Quidem, quam.
-      </p>
+      <div class="contact-content">
+        <div class="contact-left">
+          <div class="contact-card">
+            <h3>Let's Connect</h3>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:krishiv1545@gmail.com">krishiv1545@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-university"></i>
+                <a href="mailto:23f3003998@ds.study.iitm.ac.in">23f3003998@ds.study.iitm.ac.in</a>
+              </div>
+              <div class="contact-social">
+                <a href="https://linkedin.com/in/krishiv1545" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/krishiv1545" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/Krishiv1545" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="community-card">
+            <h3>Join My Community</h3>
+            <div class="community-content">
+              <div class="community-logo">
+                <img src="images/community_logo2.png" alt="CS 1 O(1) Society Logo">
+                <span>CS 1 O(1) Society</span>
+              </div>
+              <a href="https://chat.whatsapp.com/BP2kjWWo9blLEW2P22u8WW" class="join-button" target="_blank">
+                <i class="fab fa-whatsapp"></i> Join Group
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-right">
+          <form id="contact-form" class="contact-form" action="https://formspree.io/f/xdkgkbll" method="POST">
+            <h3>Send me a message</h3>
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+              <div class="form-highlight"></div>
+            </div>
+            
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+              <div class="form-highlight"></div>
+            </div>
+            
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+              <div class="form-highlight"></div>
+            </div>
+            
+            <button type="submit" class="submit-btn">
+              Send Message <i class="fa-regular fa-paper-plane"></i>
+            </button>
+            <div id="form-status" style="margin-top: 10px; color: #4caf50; font-weight: bold;"></div>
+          </form>
+          
+          
+          <div id="form-success" class="form-success">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#40623e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 4L12 14.01l-3-3" stroke="#40623e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Message Sent!</h3>
+            <p>Thanks for reaching out. I'll get back to you soon.</p>
+            <button id="send-another" class="submit-btn">Send Another</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="content-overlay"></div>
+
+    <script>
+      const projectBtn = document.getElementById('projects-navbar-button');
+      const contactBtn = document.getElementById('contact-navbar-button');
+      const aboutBtn = document.getElementById('about-navbar-button');
+      const journeyBtn = document.getElementById('journey-navbar-button');
+      
+      if (projectBtn && contactBtn && aboutBtn && journeyBtn) {
+        const projectBtnWidth = projectBtn.offsetWidth;
+        contactBtn.style.width = projectBtnWidth + 'px';
+        aboutBtn.style.width = projectBtnWidth + 'px';
+        journeyBtn.style.width = projectBtnWidth + 'px';
+      }
+    </script>
 
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
