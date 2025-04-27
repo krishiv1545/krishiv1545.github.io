@@ -378,7 +378,7 @@ h2 {
 
 .tech-stack-icons {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 1.5rem;
   width: 100%;
   padding: 20px 0;
@@ -540,8 +540,8 @@ canvas {
 }
 
 #navbar.scrolled {
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(1px);
 }
 
 
@@ -582,6 +582,10 @@ canvas {
 }
 
 /* JOURNEYYYYYYYYYYYYYYYYYYYYY / LOREEEEEEEEEEEEEEEEEEEEEEEEEEE */
+
+#journey {
+  padding: 0rem 1rem 1rem 1rem;
+}
 
 .journey-content {
   position:relative;
