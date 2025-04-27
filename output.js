@@ -1,5 +1,5 @@
 let targetRotationX = 0;
-const maxTiltX = 0.15;
+const maxTiltX = 0.12;
 const maxTiltY = 0.08;
 let targetRotationY = 0;
 const initialXRotation = -Math.PI / 2.5; // Store the initial rotation
