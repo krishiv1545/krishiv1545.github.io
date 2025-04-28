@@ -26,7 +26,7 @@
   --spacing-large: 2rem;
 }
 
-body {
+/* body {
   background: radial-gradient(circle at 50% 100%, #2a372a 1%, #000 40%);
   background-attachment: fixed;
   background-size: 200% 100%;
@@ -42,6 +42,15 @@ body {
 
   min-height: 100%;
   height: auto;
+} */
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  font-size: var(--base-font-size);
+  background-color: #000 !important;
+  min-height: 100%;
+  height: auto;
 }
 
 html {
@@ -50,11 +59,14 @@ html {
 }
 
 #title {
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   overflow: hidden;
   transition: height 0.6s ease-out;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 h1 {
@@ -65,11 +77,6 @@ h1 {
   font-weight: bold;
   font-weight: 700;
   font-size: clamp(1rem, 9vw, var(--heading-large));
-  width: 100%;
-  white-space: nowrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 a {
@@ -84,14 +91,6 @@ a {
     2px -2px 0 white,
     -2px 2px 0 white,
     2px 2px 0 white;
-}
-
-.first-name {
-  left: 1vw;
-}
-
-.last-name {
-  right: 1vw;
 }
 
 #navbar {
@@ -452,24 +451,42 @@ h2 {
   width: 100%;
   padding: 0 1vw;
   overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#projects {
+  position: relative;
+  overflow: visible !important;
+}
+
+body {
+  min-height: 100%;
+  height: auto;
+}
+html {
+  min-height: 100%;
+  height: auto;
 }
 
 .project {
   display: flex;
-  flex-direction: row;
+  position: relative;  /* Add this */
+  min-height: 100vh;
   margin-top: 1vw;
   margin-bottom: 1vw;
 }
 
 .project-left {
+  position: sticky;
+  top: 90px;
+  z-index: 500; /* Add this */
+  align-self: flex-start; /* Add this */
+  /* Existing styles */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 35%;
   padding: var(--spacing-medium);
-  height: fit-content;
-  position: sticky;
-  top: 150px;
 }
 
 .project-left h3 {
@@ -916,4 +933,8 @@ canvas {
 
 .spotlight {
   display: none;
+}
+
+.spacer {
+  height: 20px;
 }

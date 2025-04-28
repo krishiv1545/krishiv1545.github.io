@@ -2,7 +2,7 @@ let targetRotationX = 0;
 const maxTiltX = 0.12;
 const maxTiltY = 0.08;
 let targetRotationY = 0;
-const initialXRotation = -Math.PI / 2.5; // Store the initial rotation
+const initialXRotation = -Math.PI / 2.4; // Store the initial rotation
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
