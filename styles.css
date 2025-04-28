@@ -54,6 +54,7 @@ html {
   height: fit-content;
   overflow: hidden;
   transition: height 0.6s ease-out;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -131,7 +132,7 @@ a {
   height: 1px; /* Start small */
   background: #fff;
   transition: height 0.4s ease-in-out;
-  z-index: 1;
+  z-index: 1000;
 }
 
 /* On hover, pseudo-element grows */
@@ -158,6 +159,7 @@ a {
   color: #fff;
   width: 100%;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #journey {
@@ -166,15 +168,16 @@ a {
   display: flex;
   flex-direction: column;
   height: auto;
+  overflow-x: hidden
 }
 
 #nav-section {
   width: 100%;
   padding: 0 1vw;
-  transform: translateY(-40px);
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
 }
 
 #nav-section {
@@ -226,12 +229,8 @@ a {
   object-fit: cover; /* Neatly fill */
 }
 
-#nav-section,
-#about,
-#projects,
-#contact,
-#journey {
-  transform: translateY(-40px); /* you touch this, everything breaks */
+#nav-section {
+  margin-top: -40px; /* you touch this, everything breaks */
 }
 
 h2 {
@@ -275,6 +274,7 @@ h2 {
   color: #fff;
   width: 100%;
   padding: 0 1vw;
+  overflow-x: hidden;
 }
 
 .about-content {
@@ -451,6 +451,7 @@ h2 {
   color: #fff;
   width: 100%;
   padding: 0 1vw;
+  overflow-x: hidden;
 }
 
 .project {
@@ -463,6 +464,7 @@ h2 {
 .project-left {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   width: 35%;
   padding: var(--spacing-medium);
   height: fit-content;
@@ -525,8 +527,8 @@ canvas {
   position: fixed !important;
   top: 0 !important;
   left: 0 !important;
-  width: 100lvw;
-  height: 100lvh;
+  width: 100lvw !important;
+  height: 100lvh !important;
   z-index: -1000 !important;
   pointer-events: none;
 }
@@ -534,8 +536,8 @@ canvas {
 .content-overlay {
   position: fixed !important;
   width: 100%;
-  min-height: 100%;
-  height: auto;
+  min-height: 100lvw;
+  height: 100lvh;
   top: 0;
   left: 0;
   z-index: -500;
@@ -666,6 +668,7 @@ canvas {
   color: #fff;
   width: 100%;
   padding: 0rem 1rem;
+  overflow-x: hidden;
 }
 
 .contact-content {

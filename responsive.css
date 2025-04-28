@@ -79,6 +79,23 @@
     .alignRight {
       padding-right: 1rem;
     }
+
+    .about-left {
+      margin-bottom: 0;
+
+      li {
+        margin: 0;
+        margin-bottom: 1vw;
+      }
+    }
+
+    .about-right {
+      padding-top: var(--spacing-medium);
+    }
+
+    .about-project {
+      margin-top: 1rem;
+    }
   }
 
 
@@ -213,6 +230,23 @@
       .alignRight {
         padding-right: 1rem;
       }
+
+      .about-left {
+        margin-bottom: 0;
+  
+        li {
+          margin: 0;
+          margin-bottom: 1vw;
+        }
+      }
+  
+      .about-right {
+        padding-top: var(--spacing-medium);
+      }
+
+      .about-project {
+        margin-top: 1rem;
+      }
   }
   
 
@@ -331,6 +365,23 @@
     .alignRight {
       padding-right: 1rem;
     }
+
+    .about-left {
+      margin-bottom: 0;
+
+      li {
+        margin: 0;
+        margin-bottom: 1vw;
+      }
+    }
+
+    .about-right {
+      padding-top: var(--spacing-medium);
+    }
+
+    .about-project {
+      margin-top: 1rem;
+    }
   }
   
 
@@ -421,5 +472,22 @@
 
     .alignRight {
       padding-right: 1rem;
+    }
+
+    .about-left {
+      margin-bottom: 0;
+
+      li {
+        margin: 0;
+        margin-bottom: 1vw;
+      }
+    }
+
+    .about-right {
+      padding-top: var(--spacing-medium);
+    }
+
+    .about-project {
+      margin-top: 1rem;
     }
   }
