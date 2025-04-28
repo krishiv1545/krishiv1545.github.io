@@ -913,3 +913,7 @@ canvas {
   justify-content: flex-end;
   text-align: end;
 }
+
+.spotlight {
+  display: none;
+}
