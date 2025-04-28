@@ -223,9 +223,9 @@ a {
 .nav-right img.face {
   height: auto;
   width: 100%;
-  max-width: 360px; /* Adjust this as needed */
-  aspect-ratio: 1/1; /* Force square */
-  object-fit: cover; /* Neatly fill */
+  max-width: 360px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 #nav-section {
